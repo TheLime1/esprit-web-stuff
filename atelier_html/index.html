@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>inscription</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">home</a>
+        <a href="about.html">projets et taches</a>
+        <a href="contact.html">liste employes</a>
+        <a href="insci.html">inscription</a>
+      </nav>
+      <hr />
+    </header>
+    <section>
+      <img src="img1.jpg" alt="banner" height="130%" width="70%" />
+      <form>
+        <table>
+          <tr>
+            <td><label>Nom</label></td>
+            <td>
+              <input
+                type="text"
+                name="nom"
+                placeholder="nom"
+                required
+                pattern="[A-Za-z]{2,}"
+                title="Veuillez entrer un nom valide (lettres uniquement)"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Prenom</label></td>
+            <td>
+              <input
+                type="text"
+                name="prenom"
+                placeholder="prenom"
+                required
+                pattern="[A-Za-z]{2,}"
+                title="Veuillez entrer un prénom valide (lettres uniquement)"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Email</label></td>
+            <td>
+              <input type="email" name="email" placeholder="email" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Telephone</label></td>
+            <td>
+              <input
+                type="text"
+                name="telephone"
+                placeholder="telephone"
+                required
+                pattern="\d{8}"
+                title="Veuillez entrer un numéro de téléphone valide (8 chiffres)"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Date Naissance</label></td>
+            <td>
+              <input
+                type="date"
+                name="date_naissance"
+                placeholder="date"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Mot de passe</label></td>
+            <td>
+              <input
+                type="password"
+                name="mot_de_passe"
+                required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Le mot de passe doit contenir au moins 8 caractères, incluant au moins un chiffre, une lettre minuscule et une lettre majuscule"
+              />
+            </td>
+          </tr>
+        </table>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </section>
+    <footer>
+      <hr />
+      <p>
+        vous pouvez me contacter pour vous carry
+        <a href="mailto:email.mt3i@esprit.tn"> via mail</a>
+      </p>
+      <p>adresse: fi dar</p>
+    </footer>
+  </body>
+</html>
