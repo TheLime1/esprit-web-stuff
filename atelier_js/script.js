@@ -1,14 +1,10 @@
 function Nombres_parfait(n) {
+  let perfectNumbers = [
+    6, 28, 496, 8128, 33550336, 8589869056, 137438691328, 2305843008139952128,
+  ];
   let output = "";
   for (let i = 1; i < n; i++) {
-    let sum = 1;
-    for (let j = 2; j * j <= i; j++) {
-      if (i % j === 0) {
-        if (j * j !== i) sum = sum + j + i / j;
-        else sum = sum + j;
-      }
-    }
-    if (sum === i && i !== 1) {
+    if (perfectNumbers.includes(i)) {
       output += i + "\n";
     }
   }
