@@ -145,3 +145,16 @@ main {
     width: 85%;
   }
 }
+
+#v {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+td:last-child {
+  text-align: left;
+}
