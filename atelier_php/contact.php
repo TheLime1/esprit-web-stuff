@@ -16,12 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    echo "<table>";
-    echo "<tr><td>Nom</td><td>$nom</td></tr>";
-    echo "<tr><td>Prénom</td><td>$prenom</td></tr>";
-    echo "<tr><td>Email</td><td>$email</td></tr>";
-    echo "<tr><td>Téléphone</td><td>$telephone</td></tr>";
-    echo "<tr><td>Adresse</td><td>$adresse</td></tr>";
-    echo "<tr><td>Code Postal</td><td>$code_postal</td></tr>";
+    //too lazy to solve this border mess
+    echo "<table style='border:1px solid black;'>";
+    echo "<tr><td style='border:1px solid black;'>Nom</td><td style='border:1px solid black;'>Prénom</td><td style='border:1px solid black;'>Email</td><td style='border:1px solid black;'>Téléphone</td><td style='border:1px solid black;'>Adresse</td><td style='border:1px solid black;'>Code Postal</td></tr>";
+    echo "<tr><td style='border:1px solid black;'>$nom</td><td style='border:1px solid black;'>$prenom</td><td style='border:1px solid black;'>$email</td><td style='border:1px solid black;'>$telephone</td><td style='border:1px solid black;'>$adresse</td><td style='border:1px solid black;'>$code_postal</td></tr>";
     echo "</table>";
 }
