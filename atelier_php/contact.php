@@ -12,6 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($fields as $field) {
         if (empty($field)) {
             echo "Champs manquants";
+            echo "<br>";
+            echo '<p style="color: red; font-weight: bold">WARNING: DO NOT INPUT YOUR REAL DATA, IT MAY BE STORED IN AN INSECURE DATABASE.</p>';
+            echo '<p>Because GitHub Pages doesn\'t support dynamic content, I redirected you to my own server 😎</p>';
             return;
         }
     }
@@ -21,4 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<tr><td style='border:1px solid black;'>Nom</td><td style='border:1px solid black;'>Prénom</td><td style='border:1px solid black;'>Email</td><td style='border:1px solid black;'>Téléphone</td><td style='border:1px solid black;'>Adresse</td><td style='border:1px solid black;'>Code Postal</td></tr>";
     echo "<tr><td style='border:1px solid black;'>$nom</td><td style='border:1px solid black;'>$prenom</td><td style='border:1px solid black;'>$email</td><td style='border:1px solid black;'>$telephone</td><td style='border:1px solid black;'>$adresse</td><td style='border:1px solid black;'>$code_postal</td></tr>";
     echo "</table>";
+
+    echo '<p style="color: red; font-weight: bold">WARNING: DO NOT INPUT YOUR REAL DATA, IT MAY BE STORED IN AN INSECURE DATABASE.</p>';
+    echo '<p>Because GitHub Pages doesn\'t support dynamic content, I redirected you to my own server 😎</p>';
 }
