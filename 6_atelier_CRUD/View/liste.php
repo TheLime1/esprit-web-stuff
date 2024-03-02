@@ -54,6 +54,7 @@ $list = $employeC->listEmployes();
     <form method="get" action="add_employe.php">
         <button type="submit">Add Employe</button>
     </form>
+    <button onclick="window.location.href='liste_task.php'">Liste Task</button>
 </body>
 
 </html>
