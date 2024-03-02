@@ -18,20 +18,20 @@ class EmployeC
 
     public function addDummyEmploye()
     {
-        $sql = "INSERT INTO employe (firstname, lastname, email, dob) VALUES (:firstname, :lastname, :email, :dob)";
+        $sql = "INSERT INTO employe (firstname, lastname, email, dob, project_id) VALUES (:firstname, :lastname, :email, :dob, :project_id)";
         $db = config::getConnexion();
         try {
             $stmt = $db->prepare($sql);
 
-            // Define your dummy data
+            // dummy data
             $dummyData = [
                 'firstname' => 'John',
                 'lastname' => 'Doe',
                 'email' => 'john.doe@example.com',
                 'dob' => '1980-01-01',
+                'project_id' => 1
             ];
 
-            // Execute the statement with the dummy data
             $stmt->execute($dummyData);
         } catch (Exception $e) {
             die('Erreur: ' . $e->getMessage());
@@ -44,11 +44,8 @@ class EmployeC
         $db = config::getConnexion();
         try {
             $stmt = $db->prepare($sql);
-
-            // Bind the ID to the statement
             $stmt->bindValue(':id', $id);
 
-            // Execute the statement
             $stmt->execute();
         } catch (Exception $e) {
             die('Erreur: ' . $e->getMessage());
@@ -57,18 +54,17 @@ class EmployeC
 
     public function addEmploye(Employe $employe)
     {
-        $sql = "INSERT INTO employe (firstname, lastname, email, dob) VALUES (:firstname, :lastname, :email, :dob)";
+        $sql = "INSERT INTO employe (firstname, lastname, email, dob, project_id) VALUES (:firstname, :lastname, :email, :dob, :project_id)";
         $db = config::getConnexion();
         try {
             $stmt = $db->prepare($sql);
 
-            // Bind the Employe data to the statement
             $stmt->bindValue(':firstname', $employe->getFirstname());
             $stmt->bindValue(':lastname', $employe->getLastname());
             $stmt->bindValue(':email', $employe->getEmail());
             $stmt->bindValue(':dob', $employe->getDob());
+            $stmt->bindValue(':project_id', $employe->getProjectId());
 
-            // Execute the statement
             $stmt->execute();
         } catch (Exception $e) {
             die('Erreur: ' . $e->getMessage());
@@ -77,7 +73,7 @@ class EmployeC
 
     public function updateEmploye($id, Employe $employe)
     {
-        $sql = "UPDATE employe SET firstname = :firstname, lastname = :lastname, email = :email, dob = :dob WHERE id = :id";
+        $sql = "UPDATE employe SET firstname = :firstname, lastname = :lastname, email = :email, dob = :dob, project_id = :project_id WHERE id = :id";
         $db = config::getConnexion();
         try {
             $stmt = $db->prepare($sql);
@@ -86,6 +82,8 @@ class EmployeC
             $stmt->bindValue(':lastname', $employe->getLastname());
             $stmt->bindValue(':email', $employe->getEmail());
             $stmt->bindValue(':dob', $employe->getDob());
+            $stmt->bindValue(':project_id', $employe->getProjectId());
+
             $stmt->execute();
         } catch (Exception $e) {
             die('Erreur: ' . $e->getMessage());

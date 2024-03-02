@@ -6,13 +6,15 @@ class Employe
     private $firstname;
     private $email;
     private $dob;
+    private $project_id;
 
-    public function __construct($firstname, $lastname,  $email, $dob)
+    public function __construct($firstname, $lastname,  $email, $dob, $project_id)
     {
         $this->lastname = $lastname;
         $this->firstname = $firstname;
         $this->email = $email;
         $this->dob = $dob;
+        $this->project_id = $project_id;
     }
 
     public function getLastName()
@@ -35,6 +37,10 @@ class Employe
         return $this->dob;
     }
 
+    public function getProjectId()
+    {
+        return $this->project_id;
+    }
     public function setLastName($lastname)
     {
         $this->lastname = $lastname;
@@ -53,5 +59,10 @@ class Employe
     public function setDob($dob)
     {
         $this->dob = $dob;
+    }
+
+    public function setProjectId($project_id)
+    {
+        $this->project_id = $project_id;
     }
 }

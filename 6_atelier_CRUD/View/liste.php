@@ -4,6 +4,8 @@ $employeC = new EmployeC();
 
 if (isset($_GET['addDummy'])) {
     $employeC->addDummyEmploye();
+    header('Location: liste.php');
+    exit;
 }
 
 if (isset($_GET['delete'])) {
@@ -27,6 +29,7 @@ $list = $employeC->listEmployes();
             <th>Last Name</th>
             <th>Email</th>
             <th>Date of Birth</th>
+            <th>project ID</th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
@@ -38,6 +41,7 @@ $list = $employeC->listEmployes();
             echo '<td>' . $employe['lastname'] . '</td>';
             echo '<td>' . $employe['email'] . '</td>';
             echo '<td>' . $employe['dob'] . '</td>';
+            echo '<td>' . $employe['project_id'] . '</td>';
             echo '<td><a href="update_employe.php?id=' . $employe['id'] . '">Update</a></td>';
             echo '<td><a href="?delete=' . $employe['id'] . '">Delete</a></td>';
             echo '</tr>';
