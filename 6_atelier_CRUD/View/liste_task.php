@@ -12,7 +12,15 @@ if (isset($_GET['delete'])) {
   $taskC->deleteTask($_GET['delete']);
 }
 
-$list = $taskC->listTasks();
+if (isset($_POST['deleteDone'])) {
+  $taskC->deleteTasksDone();
+}
+
+if (isset($_GET['search'])) {
+  $list = $taskC->searchTaskByTitle($_GET['title']);
+} else {
+  $list = $taskC->listTasks();
+}
 ?>
 <html>
 
@@ -48,12 +56,32 @@ $list = $taskC->listTasks();
     }
     ?>
   </table>
-  <form method="get">
-    <button type="submit" name="addDummy">Add Dummy Data</button>
-  </form>
-  <form method="get" action="add_task.php">
-    <button type="submit">Add Task</button>
-  </form>
+
+  <table align="center">
+    <tr>
+      <td>
+        <form method="get">
+          <button type="submit" name="addDummy">Add Dummy Data</button>
+        </form>
+      </td>
+      <td>
+        <form method="get" action="add_task.php">
+          <button type="submit">Add Task</button>
+        </form>
+      </td>
+      <td>
+        <form method="post">
+          <button type="submit" name="deleteDone">Delete Done Tasks</button>
+        </form>
+      </td>
+      <td>
+        <form method="get">
+          <input type="text" name="title" placeholder="Search by title">
+          <button type="submit" name="search">Search</button>
+        </form>
+      </td>
+    </tr>
+  </table>
   <button onclick="window.location.href='liste.php'">Liste Employe</button>
 </body>
 

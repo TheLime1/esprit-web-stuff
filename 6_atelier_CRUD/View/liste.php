@@ -49,12 +49,20 @@ $list = $employeC->listEmployes();
         ?>
     </table>
     <form method="get">
-        <button type="submit" name="addDummy">Add Dummy Data</button>
-    </form>
-    <form method="get" action="add_employe.php">
-        <button type="submit">Add Employe</button>
+        <table align="center">
+            <tr>
+                <td>
+                    <button type="submit" name="addDummy">Add Dummy Data</button>
+                </td>
+                <td>
+                    <button type="submit" formaction="add_employe.php">Add Employe</button>
+                </td>
+            </tr>
+        </table>
     </form>
     <button onclick="window.location.href='liste_task.php'">Liste Task</button>
+    <br>
+    <button type="button" disabled>Too lazy for projects List</button>
 </body>
 
 </html>

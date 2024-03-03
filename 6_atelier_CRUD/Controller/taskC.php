@@ -28,7 +28,7 @@ class TaskC
                 'title' => 'Dummy Task',
                 'description' => 'This is a dummy task',
                 'duration' => 60,
-                'state' => 'pending',
+                'state' => 'done',
                 'employe_id' => 27
             ];
 
@@ -102,6 +102,35 @@ class TaskC
             $stmt->execute();
 
             return $stmt->fetch();
+        } catch (Exception $e) {
+            die('Erreur: ' . $e->getMessage());
+        }
+    }
+
+    public function searchTaskByTitle($title)
+    {
+        $sql = "SELECT * FROM task WHERE title LIKE :title";
+        $db = config::getConnexion();
+        try {
+            $stmt = $db->prepare($sql);
+            $stmt->bindValue(':title', '%' . $title . '%');
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            die('Erreur: ' . $e->getMessage());
+        }
+    }
+
+    public function deleteTasksDone()
+    {
+        $sql = "DELETE FROM task WHERE state IN (:state1, :state2)";
+        $db = config::getConnexion();
+        try {
+            $stmt = $db->prepare($sql);
+            $stmt->bindValue(':state1', 'termine');
+            $stmt->bindValue(':state2', 'done');
+            $stmt->execute();
         } catch (Exception $e) {
             die('Erreur: ' . $e->getMessage());
         }
