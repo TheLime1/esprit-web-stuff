@@ -1,1 +1,3 @@
 ## check the work live at: https://thelime1.github.io/esprit-web-stuff/
+
+![Deployment Status](https://github.com/TheLime1/esprit-web-stuff/actions/workflows/static.yml/badge.svg) ![Server Status](https://img.shields.io/website?down_color=red&down_message=Static%20Page%20Offline&up_color=green&up_message=Static%20Page%20Online&url=https%3A%2F%2Fthelime1.github.io%2Fesprit-web-stuff%2F) ![PHP Status](https://img.shields.io/website?down_color=red&down_message=PHP%20Server%20Offline&up_color=green&up_message=PHP%20Server%20Online&url=http%3A%2F%2Flime1.unaux.com%2Ftest)

@@ -21,7 +21,7 @@ class Verification
                 exit();
             }
 
-            $employe1 = new Employe($firstname, $lastname, $email, $phone, $password, $dob);
+            $employe1 = new Employe($firstname, $lastname, $password, $dob, $email, $phone);
             $_SESSION['employe'] = serialize($employe1);
             header('Location: ../View/showEmploye.php');
             exit();

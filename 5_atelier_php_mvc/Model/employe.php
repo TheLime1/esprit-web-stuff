@@ -6,7 +6,7 @@ class Employe
     private $firstname;
     private $password;
     private $phone;
-    private $dOB;
+    private $dob;
     private $email;
 
     public function __construct($firstname, $lastname, $password, $dOB, $email, $phone)
@@ -14,7 +14,7 @@ class Employe
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->password = $password;
-        $this->dOB = $dOB;
+        $this->dob = $dOB;
         $this->email = $email;
         $this->phone = $phone;
     }
@@ -52,11 +52,11 @@ class Employe
     }
     public function getDOB()
     {
-        return $this->dOB;
+        return $this->dob;
     }
     public function setDOB($dob)
     {
-        $this->dOB = $dob;
+        $this->dob = $dob;
     }
     public function getEmail()
     {
