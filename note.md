@@ -1,0 +1,1 @@
+- organize `View` folder by making subfolders for each class
