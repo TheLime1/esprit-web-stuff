@@ -314,7 +314,7 @@
                 <p>week 6 : introduction to DB CRUD operations , 27/02/2024</p>
                 <a
                   class="show-more"
-                  href="https://thelime1.github.io/404/"
+                  href="http://lime1.unaux.com/6_atelier_CRUD/View/liste.php"
                   target="_blank"
                   ><svg
                     fill="none"
@@ -388,6 +388,36 @@
       </div>
     </main>
     <!-- partial -->
+    <script src="chat.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/deep-chat@1.4.11/dist/deepChat.bundle.js"
+    ></script>
+    <deep-chat
+      textInput='{
+      "disabled": true,
+      "placeholder": {
+        "text": "you cant type here :P"
+    }}'
+      initialMessages='[
+    {"text": "By accessing this website, you agree to the Terms of Service", "role": "ai"},
+    {"html": "<link-button href=\"file:///C:/Users/everp/Documents/GitHub/esprit-web-stuff/terms.html\" text=\"Terms of Service \"></link-button>", "role": "ai"}
+  ]'
+      style="
+        border-radius: 10px;
+        position: fixed;
+        bottom: 0px;
+        right: 7%;
+        z-index: 1;
+      "
+      stream="true"
+      demo='{
+        "response": {
+          "text": "nice try, but this is a demo. You cant send messages."
+        }
+      }'
+    ></deep-chat>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
