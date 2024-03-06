@@ -75,7 +75,7 @@ window.onload = function () {
       role: "ai",
     },
     {
-      html: '<link-button href="file:///C:/Users/everp/Documents/GitHub/esprit-web-stuff/terms.html" text="Terms of Service "></link-button>',
+      html: '<link-button href="file:terms.html" text="Terms of Service "></link-button>',
       role: "ai",
     },
     { files: [{ src: "images/chat.jpg", type: "image" }], role: "ai" },
