@@ -1,1 +1,2 @@
 - organize `View` folder by making subfolders for each class
+- in the .sql change to colation from `utf8mb4_0900_ai_ci` to `utf8mb4_general_ci` so it get supported on the PHP server
