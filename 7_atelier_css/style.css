@@ -1,0 +1,67 @@
+/* Sélectionnez l'élément 'body' pour appliquer le style à tout le contenu de la page */
+body {
+  font-family: Arial, sans-serif; /* Choisir une police de caractères */
+  background-color: #f2f2f2; /* Choisir une couleur de fond */
+  margin: 0; /* Supprimez les marges par défaut */
+  padding: 0; /* Supprimez le remplissage par défaut */
+}
+
+/* Sélectionnez l'élément 'header' pour personnaliser la zone d'en-tête */
+header {
+  background-color: #333; /* Couleur de fond de l'en-tête */
+  color: #fff; /* Couleur du texte de l'en-tête */
+  text-align: center; /* Centrez le texte */
+  padding: 20px; /* Ajoutez un espacement interne */
+}
+
+/* Personnalisez les liens dans la barre de navigation */
+nav a {
+  text-decoration: none; /* Supprimez le soulignement des liens */
+  color: #fff; /* Couleur du texte des liens */
+  margin: 10px; /* Ajoutez une marge autour des liens */
+}
+
+/* Personnalisez la section principale */
+section {
+  margin: 20px; /* Ajoutez de la marge autour de la section */
+}
+
+/* Style des titres */
+h1 {
+  font-size: 36px; /* Taille de la police du titre principal */
+  color: #333; /* Couleur du texte du titre principal */
+}
+
+h2 {
+  font-size: 24px; /* Taille de la police du titre de niveau 2 */
+  color: #666; /* Couleur du texte du titre de niveau 2 */
+}
+
+/* Style du paragraphe principal */
+p {
+  font-size: 16px; /* Taille de la police du texte principal */
+  line-height: 1.5; /* Espacement des lignes */
+  color: #444; /* Couleur du texte principal */
+}
+
+/* Personnalisez le tableau */
+table {
+  width: 100%; /* Tableau largeur de 100% de la section */
+  border-collapse: collapse; /* Fusionnez les bordures des cellules du tableau */
+  margin-top: 20px; /* Ajoutez une marge au-dessus du tableau */
+}
+
+table th,
+table td {
+  border: 1px solid #ddd; /* Ajoutez des bordures aux cellules du tableau */
+  padding: 10px; /* Ajoutez de l'espacement interne aux cellules */
+  text-align: center; /* Centrez le contenu du tableau */
+}
+
+/* Personnalisez le pied de page */
+footer {
+  background-color: #333; /* Couleur de fond du pied de page */
+  color: #fff; /* Couleur du texte du pied de page */
+  text-align: center; /* Centrez le texte du pied de page */
+  padding: 10px; /* Ajoutez un espacement interne au pied de page */
+}
